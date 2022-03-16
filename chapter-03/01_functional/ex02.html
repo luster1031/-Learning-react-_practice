@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const createScream = function(logger){
+            console.log(logger);    
+            
+            return function(message2){
+                console.log(message2);
+                logger(message2.toUpperCase() + "!!!!");
+            };
+        };
+
+        const scream = createScream(message1 => console.log(message1));
+
+        scream('함수가 함수를 반환할 수 있음');
+        scream('createScream은 함수를 반환함');
+        scream('scream은 createScream이 반환한 함수를 가리킴');
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
