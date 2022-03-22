@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>immutability ex01</title>
+</head>
+
+<body>
+    <p>Open th console</p>
+    <script type="text/babel">
+        let color_lawn = {
+            title: "lawn",
+            color: "#00FF00",
+            rating: 0
+        };
+        function rateColor(color, rating){
+            color.rating = rating;
+            return color;
+        }
+
+        console.log(rateColor(color_lawn, 5).rating);
+        console.log(color_lawn.rating);
+    </script>
+</body>
+
+</html>

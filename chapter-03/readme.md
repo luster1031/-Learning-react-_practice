@@ -15,7 +15,7 @@
         const str = string.replace(//g, "-");
         ```
 3. 함수형 프로그래밍의 개념
-    1. 불변성
+    1. [불변성](https://github.com/luster1031/Learning-react_practice/tree/main/chapter-03/03_immutability)
     2. 순수성
     3. 데이터 변환
     4. 고차 함수
