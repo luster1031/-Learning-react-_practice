@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <p>순수 함수 아님</p>
+    <p>순수 함수</p>
     <script>
         var frederick = {
             name: "Frederick Douglass",
@@ -17,14 +17,14 @@
             canWrite: false
         };
 
-        const selfEducate = person => {
-            person.canRead = true;
-            person.canWrite = true;
-            return person;
-        };
+        const selfEducate = person => ({
+            ...person,
+            canRead: true,
+            canWrite: true
+        });
 
-        console.log(selfEducate(frederick));    //  인수로 넘긴 객체 넘김
-        console.log(frederick);
+        console.log(selfEducate(frederick));    //  {name: 'Frederick Douglass', canRead: true, canWrite: true}
+        console.log(frederick);                 //  {name: 'Frederick Douglass', canRead: false, canWrite: false}
     </script>
 </body>
 

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Pure Functions</h1>
+    <div id="react-container"></div>
+    <script>
+        const Header = props => <h1>{props.title}</h1>
+        
+        ReactDOM.render(
+            <Header title="React use pure functions" />,
+            document.getElementById("react-container")
+        );
+    </script>
+</body>
+
+</html>

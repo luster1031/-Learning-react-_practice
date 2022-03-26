@@ -11,6 +11,7 @@
 
 
 <br>
+<br>
 
 ### 순수 함수 규칙
 1. 파라미터를 최소 하나 이상 받아야함
@@ -24,4 +25,3 @@
         ```js
         schools.map(school => $`{school} High School`);
         ```
-    
