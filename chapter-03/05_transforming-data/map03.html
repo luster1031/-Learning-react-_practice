@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>map 03</h1>
+    <script>
+        let schools = [
+            { name: "Yorktown" },
+            { name: "Stratford" },
+            { name: "Washington & Lee" },
+            { name: "Wakefield" }
+        ]
+
+        //  map : 새로운 객체 반환한다. 
+        const ediName = (oldName, name, arr) =>
+            arr.map(item => {
+                if (item.name === oldName) {
+                    return {    //  oldName과 같으면  새이름(name)을 객체에 넣어서 반환함
+                        ...item,
+                        name
+                    }
+                } else {
+                    return item
+                }
+            })
+        
+        /* 3항 연산자
+        const editName = (oldName, name, arr) => {
+            arr.map(item => (item.name === oldName) ?
+                ({ ...item, name }) :
+                item
+            )
+        }
+        */      
+        
+        
+        let updateSchools = ediName("Stratford", "HB Woodlawn", schools);
+
+        //  updateSchools와 schools는 다르다.
+        console.log(updateSchools); //  {name: 'Stratford'} -> 1: {name: 'HB Woodlawn'}
+        console.log(schools[1]);    // {name: 'Stratford'}
+    </script>
+</body>
+
+</html>

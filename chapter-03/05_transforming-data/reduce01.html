@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>reduce 01</h1>
+    <script>
+        const ages = [21, 18, 42, 40, 64, 63, 34];
+
+        //  초깃값과 변환 함수를 인자로 받음 - max
+        //  변환함수는 객체의 모든 원소에 대해 한 번씩 호출됨 - age
+        const maxAge = ages.reduce((max, age) => {
+            console.log(`${age} > ${max} = ${age > max}`)
+            if (age > max) {
+                return age
+            } else {
+                return max
+            }
+        }, 0)
+
+        /*
+        const max = ages.reduce(
+            (max, value) => (value > max) ? value : max,
+            0
+        )
+        */
+        
+        console.log('maxAge', maxAge)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>reduce 02</h1>
+    <script>
+        const colors = [
+            {
+                id: '-xekare',
+                title: "rad red",
+                rating: 3
+            },
+            {
+                id: '-jbwsof',
+                title: "big blue",
+                rating: 2
+            },
+            {
+                id: '-prigbj',
+                title: "grizzly grey",
+                rating: 5
+            },
+            {
+                id: '-ryhbhsl',
+                title: "banana",
+                rating: 1
+            }
+        ]
+
+        const hashColors = colors.reduce(
+            (hash, { id, title, rating }) => {
+                hash[id] = { title, rating }        //  hash에 새로운 키 추가
+                return hash;
+            },
+            {}
+        )
+
+        console.log(hashColors);
+    </script>
+</body>
+
+</html>
