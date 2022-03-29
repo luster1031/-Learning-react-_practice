@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>재귀 03</title>
+</head>
+<body>
+    <script>
+        const dan = {
+            type: "person",
+            data: {
+              gender: "male",
+              info: {
+                id: 22,
+                fullname: {
+                  first: "Dan",
+                  last: "Deacon"
+                }
+              }
+            }
+          }
+    
+        const deepPick = (fields, object={}) => {
+           const [first, ...remaining] = fields.split(".")
+           return (remaining.length) ?
+               deepPick(remaining.join("."), object[first]) :
+               object[first]
+        }
+    
+        console.log( deepPick("type", dan) );   //  person
+        console.log( deepPick("data.info.fullname.first", dan) );   //  Dan
+    </script>
+</body>
+</html>

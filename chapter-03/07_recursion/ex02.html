@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>재귀 02</title>
+</head>
+<body>
+    <script>
+        const countdown = (value, fn, delay=1000) => {
+            fn(value)
+            return (value > 0) ?
+                setTimeout(() => countdown(value-1, fn), delay) :
+                value
+        }
+    
+        const log = value => console.log(value);
+        countdown(10, log);
+    </script>
+</body>
+</html>
