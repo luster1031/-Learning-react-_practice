@@ -18,5 +18,7 @@
     1. [불변성](https://github.com/luster1031/Learning-react_practice/tree/main/chapter-03/03_immutability)
     2. [순수성](https://github.com/luster1031/Learning-react_practice/tree/main/chapter-03/04_pure-function)
     3. [데이터 변환](https://github.com/luster1031/Learning-react_practice/tree/main/chapter-03/05_transforming-data)
-    4. 고차 함수
-    5. 재귀
+    4. [고차 함수](https://github.com/luster1031/Learning-react_practice/tree/main/chapter-03/06_higher-order-functions)
+    5. [재귀](https://github.com/luster1031/Learning-react_practice/tree/main/chapter-03/07_recursion)
+    6. [합성 + 하나로 합치기](https://github.com/luster1031/Learning-react_practice/tree/main/chapter-03/08_composition)
+   
